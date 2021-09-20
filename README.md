@@ -1,0 +1,1 @@
+Simple web application which converts geographical latitude and longitude values into Map Reference Numbers (MRN) on the standard Singapore topographical map. 

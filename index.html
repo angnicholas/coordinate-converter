@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Map</title>
+		<link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
+		<!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+		<script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="style.css">	
+		
+		<style>
+			#map {
+				position: relative;
+			}
+			#info {
+				position: absolute;
+				height: 1px;
+				width: 1px;
+				z-index: 100;
+			}
+			.tooltip.in {
+				opacity: 1;
+			}
+			.tooltip.top .tooltip-arrow {
+				border-top-color: white;
+			}
+			.tooltip-inner {
+				border: 2px solid white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="mapscript.js"></script>
+		<div id="map" class="map col-md-9"><div id="info"></div></div>		
+		
+	
+		<div class="controls col-md-3">
+			<h1>Route</h1>
+			<button id="start">Start</button>
+			<button id="stop">Stop</button><br>
+			<button id="clear">Clear</button>
+			<button id="undo">Undo</button><br>		
+
+			<button id="showpoints">Download Coordinates</button><br>			
+			<div>
+			<p class="lebal">Longitude<br><textarea id="currentlong" rows="1"></textarea></p>
+			<p class="lebal">Latitude<br><textarea id="currentlat" rows="1"></textarea></p>
+			<p class="lebal">Easting<br><textarea id="easting" rows="1"></textarea></p>
+			<p class="lebal">Northing<br><textarea id="northing" rows="1"></textarea></p>
+			</div>
+<!-- 
+			<h1>Convex Hull</h1>
+			<button id="ch_start">Start</button>
+			<button id="ch_stop">Stop</button>
+			<button id="ch_clear">Clear</button>
+			<button id="ch_undo">Undo</button> -->
+		</div>
+		
+		
+		<!-- <script src="modules/content.js"></script> -->
+	
+		
+	</body>
+</html>
